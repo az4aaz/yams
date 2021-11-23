@@ -73,6 +73,14 @@ void lancerDe(int qtDe, int sortieDe[5]) {
     printf("\n");
 }
 
+void conservDe(int lesDe[5]) {
+
+}
+
+void rentreeScore(int lesDe[5], int tabScore[2][17], int joueur) {
+
+}
+
 int main() {
     srand(time(NULL));
     int score[2][17];
@@ -92,6 +100,8 @@ int main() {
         printScoreSheet(score, nameJ1, nameJ2);
         printf("Tour de %s :\n", nameJ1);
         lancerDe(5, de);
+        conservDe(de);
+        rentreeScore(de, score, tour+1);
     }
     
     
