@@ -12,7 +12,7 @@ void resetScore(int tabScore[2][17]) {
 }
 
 
-void printScoreSheet(int tabScore[2][17], char prenomJ1[5], char prenomJ2[5]) {
+void printScoreSheet(int tabScore[2][17], char prenomJ1[8], char prenomJ2[8]) {
     printf("╔══════════════════════╦════════╦═══════╗\n");
     printf("║        Score         ║%s\t║%s\t║\n", prenomJ1, prenomJ2);
     printf("╠══════════════════════╬════════╬═══════╣\n");
@@ -36,20 +36,20 @@ void printScoreSheet(int tabScore[2][17], char prenomJ1[5], char prenomJ2[5]) {
     printf("╚══════════════════════╩════════╩═══════╝\n");
 }
 
-void saisieNom(char prenomJ1[6], char prenomJ2[6]) {
+void saisieNom(char prenomJ1[8], char prenomJ2[8]) {
     char prenom[50];
     printf("Quel est le nom du joueur 1 ? \n");
     scanf("%s", prenom);
-    while(strlen(prenom)>5) {
-        printf("Erreur : veuillez saisir un nom compris entre 1 et 5 caractères\n");
+    while(strlen(prenom)>7) {
+        printf("Erreur : veuillez saisir un nom compris entre 1 et 7 caractères\n");
         printf("Quel est le nom du joueur 1 ? \n");
         scanf("%s", prenom);
     };
     strcpy(prenomJ1, prenom);
     printf("Quel est le nom du joueur 2 ? \n");
     scanf("%s", prenom);
-    while(strlen(prenom)>5) {
-        printf("Erreur : veuillez saisir un nom compris entre 1 et 5 caractères\n");
+    while(strlen(prenom)>7) {
+        printf("Erreur : veuillez saisir un nom compris entre 1 et 7 caractères\n");
         printf("Quel est le nom du joueur 2 ? \n");
         scanf("%s", prenom);
     };
@@ -76,7 +76,7 @@ void lancerDe(int qtDe, int sortieDe[5]) {
 int main() {
     srand(time(NULL));
     int score[2][17];
-    char nameJ1[6], nameJ2[6];
+    char nameJ1[8], nameJ2[8];
     int de[5];
     char reponse[20];
     printf("__  _____    __  ________\n");
