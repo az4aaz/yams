@@ -57,28 +57,51 @@ void saisieNom(char prenomJ1[8], char prenomJ2[8]) {
     printf("%s : %s\n", prenomJ1, prenomJ2);
 }
 
-void lancerDe(int qtDe, int sortieDe[5]) {
-    for (int de=0; de<qtDe; de++) {
+//(rand()%6)+1;
+
+void afficherDe(int lesDe[5]) {
+    for (int de=0; de<5; de++) {
         printf("┌───┐  ");
     }
     printf("\n");
-    for (int de=0; de<qtDe; de++) {
-        sortieDe[de] = (rand()%6)+1;
-        printf("│ %d │  ", sortieDe[de]);
+    for (int de=0; de<5; de++) {
+        printf("│ %d │  ", lesDe[de]);
     }
     printf("\n");
-    for (int de=0; de<qtDe; de++) {
+    for (int de=0; de<5; de++) {
         printf("└───┘  ");
     }
     printf("\n");
 }
 
 void conservDe(int lesDe[5]) {
+    char entree[5];
+    do {
+        printf("Voulez-vous relancer un dé ? Si oui, indiquer lequel : (un seul a la fois)\n");
+        scanf("%s", entree);
+        if (strcmp(entree, "non")!=0 && strcmp(entree, "Non")!=0 && strcmp(entree, "N")!=0 && strcmp(entree, "n")!=0) {
+            lesDe[atoi(entree)-1] = 0;
+        }
+    } while (strcmp(entree, "non")!=0 && strcmp(entree, "Non")!=0 && strcmp(entree, "N")!=0 && strcmp(entree, "n")!=0);
+}
 
+
+void lancerDe(int lesDe[5]) {
+    for (int de = 0; de < 5; de++) {
+        if (lesDe[de]==0) {
+            lesDe[de] = (rand()%6)+1;
+        }
+    }
 }
 
 void rentreeScore(int lesDe[5], int tabScore[2][17], int joueur) {
 
+}
+
+void resetDe(int lesDe[5]) {
+    for (int de = 0; de < 5; de++) {
+        lesDe[de] = 0;
+    }
 }
 
 int main() {
@@ -86,7 +109,6 @@ int main() {
     int score[2][17];
     char nameJ1[8], nameJ2[8];
     int de[5];
-    char reponse[20];
     printf("__  _____    __  ________\n");
     printf("\\ \\/ /   |  /  |/  / ___/\n");
     printf(" \\  / /| | / /|_/ /\\__ \\ \n");
@@ -94,16 +116,17 @@ int main() {
     printf("/_/_/  |_/_/  /_//____/  \n");
     printf("\n"); 
     resetScore(score);
-    score[0][0] = 100;
     saisieNom(nameJ1, nameJ2);
     for (int tour = 1; tour < 27; tour++ ) {
+        resetDe(de);
         printScoreSheet(score, nameJ1, nameJ2);
         printf("Tour de %s :\n", nameJ1);
-        lancerDe(5, de);
+        lancerDe(de);
+        afficherDe(de);
         conservDe(de);
-        rentreeScore(de, score, tour+1);
+        lancerDe(de);
+        afficherDe(de);
+        //rentreeScore(de, score, tour+1);
     }
-    
-    
 }
 
