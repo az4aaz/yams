@@ -1,0 +1,390 @@
+\hypertarget{yams_8c}{}\doxysection{Référence du fichier yams.\+c}
+\label{yams_8c}\index{yams.c@{yams.c}}
+
+
+Jeu du Y\+A\+MS.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Graphe des dépendances par inclusion de yams.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{yams_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{yams_8c_a3944bc0833a5ad93fcbe983896d1112a}{reset\+Score}} (int tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]})
+\begin{DoxyCompactList}\small\item\em Une procedure qui permet de reinitialiser le tableau des scores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_ae2526e896e49fbbf4629cc354ea02c32}{change\+Tab}} (int val, char chaine\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction qui convertie un int en str. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a3154ca900e910d05c6d982f11e87977a}{print\+Score\+Sheet}} (int tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]}, char prenom\+J1\mbox{[}8\mbox{]}, char prenom\+J2\mbox{[}8\mbox{]}, int totaux\mbox{[}2\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Une procédure qui permet d\textquotesingle{}afficher le tableau des scores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a00d8e4a548166aa63dec37fa953472b8}{saisie\+Nom}} (char prenom\+J1\mbox{[}8\mbox{]}, char prenom\+J2\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Une procédure qui permet de saisir les noms de chaques joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a72c4d8754663e39d0071e3984d7760f7}{afficher\+De}} (int les\+De\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Une procédure qui permet d\textquotesingle{}afficher les dés. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_ac983afe1ae6d9b1b39b1cdcf05d48117}{lancer\+De}} (int les\+De\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Une procédure qui permet de generer un liste de dés alétoires. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_ac86480bad2e04490aab3e99a6cd6cd99}{conserv\+De}} (int les\+De\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Un procédure qui permet à l\textquotesingle{}utilisateur de conserver ses dés/lancer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a14e8f2fb81b28a8715b0f9c502c48020}{tri\+Bulle}} (int les\+De\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Procédure de tri (bulle) permettant de trier les dés. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{yams_8c_acd35c17cd1225cf56ac441ff0536125e}{total\+\_\+x}} (int x, int les\+De\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Une fonction qui permet de ressortir le nombre total qu\textquotesingle{}apparait une valeur x de dé dans un tableau. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{yams_8c_a017d27a389e7663cbd739347b451aadf}{somme\+De}} (int les\+De\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de generer la somme d\textquotesingle{}un tableau de dé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a5d5ab94d3074ccf9db6462e9457a3da2}{vide\+Tableau}} (int tab\mbox{[}13\mbox{]})
+\begin{DoxyCompactList}\small\item\em Un procédure qui permet de remetre à 0 un tableau de taille 13. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a04f9f8641a61d04eb5df1674877e44c4}{sans\+Doublons}} (int les\+De\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Une procédure qui permet de supprimer les doublons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a937f3fa806860c7ca61f6719076ff2ab}{detection\+Comb}} (int les\+De\mbox{[}5\mbox{]}, int possibilite\mbox{[}13\mbox{]})
+\begin{DoxyCompactList}\small\item\em Une procédure qui permet de detecter les combinaisons possibles a partir de dés. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a37e5b0a1123b3f8001693a011ccf352a}{bloquage\+Case}} (int tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]}, int joueur)
+\begin{DoxyCompactList}\small\item\em Procédure qui permet de bloquer une case. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a412ad95a39bb0410ab1833e38805bf9e}{rentree\+Score}} (int les\+De\mbox{[}5\mbox{]}, int tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]}, int joueur)
+\begin{DoxyCompactList}\small\item\em Une procédure qui permet de saisir les scores dans le tableau des scores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_aedc91a0524b806ad7e13e7a8b6b2d964}{reset\+De}} (int les\+De\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em Procédure qui permet de reinitialiser les dés. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_a7800b026c58a9b4b1a63f2dcbb238578}{update\+Totaux}} (int tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]}, int totaux\mbox{[}2\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Procédure qui met a jour les totaux. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{yams_8c_afb4a326509c2aba878f50ca97c8b1d92}{gagnant}} (char prenom\+J1\mbox{[}8\mbox{]}, char prenom\+J2\mbox{[}8\mbox{]}, int totaux\mbox{[}2\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Procédure qui affiche le gagant. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{yams_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Le main. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Jeu du Y\+A\+MS. 
+
+\begin{DoxyAuthor}{Auteur}
+Lucien H\+E\+R\+VE J2 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/11-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{yams_8c_a72c4d8754663e39d0071e3984d7760f7}\label{yams_8c_a72c4d8754663e39d0071e3984d7760f7}} 
+\index{yams.c@{yams.c}!afficherDe@{afficherDe}}
+\index{afficherDe@{afficherDe}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{afficherDe()}{afficherDe()}}
+{\footnotesize\ttfamily void afficher\+De (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Une procédure qui permet d\textquotesingle{}afficher les dés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a37e5b0a1123b3f8001693a011ccf352a}\label{yams_8c_a37e5b0a1123b3f8001693a011ccf352a}} 
+\index{yams.c@{yams.c}!bloquageCase@{bloquageCase}}
+\index{bloquageCase@{bloquageCase}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{bloquageCase()}{bloquageCase()}}
+{\footnotesize\ttfamily void bloquage\+Case (\begin{DoxyParamCaption}\item[{int}]{tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]},  }\item[{int}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Procédure qui permet de bloquer une case. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tab\+Score} & Un tableau qui contient les scores des 2 joueurs \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_ae2526e896e49fbbf4629cc354ea02c32}\label{yams_8c_ae2526e896e49fbbf4629cc354ea02c32}} 
+\index{yams.c@{yams.c}!changeTab@{changeTab}}
+\index{changeTab@{changeTab}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{changeTab()}{changeTab()}}
+{\footnotesize\ttfamily void change\+Tab (\begin{DoxyParamCaption}\item[{int}]{val,  }\item[{char}]{chaine\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction qui convertie un int en str. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em val} & \\
+\hline
+{\em chaine} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_ac86480bad2e04490aab3e99a6cd6cd99}\label{yams_8c_ac86480bad2e04490aab3e99a6cd6cd99}} 
+\index{yams.c@{yams.c}!conservDe@{conservDe}}
+\index{conservDe@{conservDe}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{conservDe()}{conservDe()}}
+{\footnotesize\ttfamily void conserv\+De (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Un procédure qui permet à l\textquotesingle{}utilisateur de conserver ses dés/lancer. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a937f3fa806860c7ca61f6719076ff2ab}\label{yams_8c_a937f3fa806860c7ca61f6719076ff2ab}} 
+\index{yams.c@{yams.c}!detectionComb@{detectionComb}}
+\index{detectionComb@{detectionComb}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{detectionComb()}{detectionComb()}}
+{\footnotesize\ttfamily void detection\+Comb (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]},  }\item[{int}]{possibilite\mbox{[}13\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Une procédure qui permet de detecter les combinaisons possibles a partir de dés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+{\em possibilite} & Un tableau qui contient toutes les possibilités qu\textquotesingle{}a le joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_afb4a326509c2aba878f50ca97c8b1d92}\label{yams_8c_afb4a326509c2aba878f50ca97c8b1d92}} 
+\index{yams.c@{yams.c}!gagnant@{gagnant}}
+\index{gagnant@{gagnant}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{gagnant()}{gagnant()}}
+{\footnotesize\ttfamily void gagnant (\begin{DoxyParamCaption}\item[{char}]{prenom\+J1\mbox{[}8\mbox{]},  }\item[{char}]{prenom\+J2\mbox{[}8\mbox{]},  }\item[{int}]{totaux\mbox{[}2\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Procédure qui affiche le gagant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prenom\+J1} & Prénom du joueur 1 \\
+\hline
+{\em prenom\+J2} & Prénom du joueur 2 \\
+\hline
+{\em totaux} & Tableau qui contient les totaux des 2 joueursS \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_ac983afe1ae6d9b1b39b1cdcf05d48117}\label{yams_8c_ac983afe1ae6d9b1b39b1cdcf05d48117}} 
+\index{yams.c@{yams.c}!lancerDe@{lancerDe}}
+\index{lancerDe@{lancerDe}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{lancerDe()}{lancerDe()}}
+{\footnotesize\ttfamily void lancer\+De (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Une procédure qui permet de generer un liste de dés alétoires. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{yams_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{yams.c@{yams.c}!main@{main}}
+\index{main@{main}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Le main. 
+
+\begin{DoxyReturn}{Renvoie}
+int E\+X\+I\+T\+\_\+\+S\+U\+C\+C\+E\+SS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{yams_8c_a3154ca900e910d05c6d982f11e87977a}\label{yams_8c_a3154ca900e910d05c6d982f11e87977a}} 
+\index{yams.c@{yams.c}!printScoreSheet@{printScoreSheet}}
+\index{printScoreSheet@{printScoreSheet}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{printScoreSheet()}{printScoreSheet()}}
+{\footnotesize\ttfamily void print\+Score\+Sheet (\begin{DoxyParamCaption}\item[{int}]{tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]},  }\item[{char}]{prenom\+J1\mbox{[}8\mbox{]},  }\item[{char}]{prenom\+J2\mbox{[}8\mbox{]},  }\item[{int}]{totaux\mbox{[}2\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Une procédure qui permet d\textquotesingle{}afficher le tableau des scores. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tab\+Score} & Le tableau des scores \\
+\hline
+{\em prenom\+J1} & Une chaine de caractères qui contient le surnom du J1 \\
+\hline
+{\em prenom\+J2} & Une chaine de caractères qui contient le surnom du J2 \\
+\hline
+{\em totaux} & Un tableau qui contient les totaux des 2 joueurs \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a412ad95a39bb0410ab1833e38805bf9e}\label{yams_8c_a412ad95a39bb0410ab1833e38805bf9e}} 
+\index{yams.c@{yams.c}!rentreeScore@{rentreeScore}}
+\index{rentreeScore@{rentreeScore}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{rentreeScore()}{rentreeScore()}}
+{\footnotesize\ttfamily void rentree\+Score (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]},  }\item[{int}]{tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]},  }\item[{int}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Une procédure qui permet de saisir les scores dans le tableau des scores. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+{\em tab\+Score} & Un tableau qui contient les scores des 2 joueurs \\
+\hline
+{\em joueur} & Int qui correspond au joueur actif \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_aedc91a0524b806ad7e13e7a8b6b2d964}\label{yams_8c_aedc91a0524b806ad7e13e7a8b6b2d964}} 
+\index{yams.c@{yams.c}!resetDe@{resetDe}}
+\index{resetDe@{resetDe}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{resetDe()}{resetDe()}}
+{\footnotesize\ttfamily void reset\+De (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Procédure qui permet de reinitialiser les dés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a3944bc0833a5ad93fcbe983896d1112a}\label{yams_8c_a3944bc0833a5ad93fcbe983896d1112a}} 
+\index{yams.c@{yams.c}!resetScore@{resetScore}}
+\index{resetScore@{resetScore}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{resetScore()}{resetScore()}}
+{\footnotesize\ttfamily void reset\+Score (\begin{DoxyParamCaption}\item[{int}]{tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Une procedure qui permet de reinitialiser le tableau des scores. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tab\+Score} & Le tableau des scores \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a00d8e4a548166aa63dec37fa953472b8}\label{yams_8c_a00d8e4a548166aa63dec37fa953472b8}} 
+\index{yams.c@{yams.c}!saisieNom@{saisieNom}}
+\index{saisieNom@{saisieNom}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{saisieNom()}{saisieNom()}}
+{\footnotesize\ttfamily void saisie\+Nom (\begin{DoxyParamCaption}\item[{char}]{prenom\+J1\mbox{[}8\mbox{]},  }\item[{char}]{prenom\+J2\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Une procédure qui permet de saisir les noms de chaques joueurs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em prenom\+J1} & Une chaine de caractères qui contient le surnom du J1 \\
+\hline
+{\em prenom\+J2} & Une chaine de caractères qui contient le surnom du J1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a04f9f8641a61d04eb5df1674877e44c4}\label{yams_8c_a04f9f8641a61d04eb5df1674877e44c4}} 
+\index{yams.c@{yams.c}!sansDoublons@{sansDoublons}}
+\index{sansDoublons@{sansDoublons}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{sansDoublons()}{sansDoublons()}}
+{\footnotesize\ttfamily void sans\+Doublons (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Une procédure qui permet de supprimer les doublons. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a017d27a389e7663cbd739347b451aadf}\label{yams_8c_a017d27a389e7663cbd739347b451aadf}} 
+\index{yams.c@{yams.c}!sommeDe@{sommeDe}}
+\index{sommeDe@{sommeDe}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{sommeDe()}{sommeDe()}}
+{\footnotesize\ttfamily int somme\+De (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de generer la somme d\textquotesingle{}un tableau de dé 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int La somme de toutes les valeurs du tableau 
+\end{DoxyReturn}
+\mbox{\Hypertarget{yams_8c_acd35c17cd1225cf56ac441ff0536125e}\label{yams_8c_acd35c17cd1225cf56ac441ff0536125e}} 
+\index{yams.c@{yams.c}!total\_x@{total\_x}}
+\index{total\_x@{total\_x}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{total\_x()}{total\_x()}}
+{\footnotesize\ttfamily int total\+\_\+x (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{les\+De\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui permet de ressortir le nombre total qu\textquotesingle{}apparait une valeur x de dé dans un tableau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & le dé recherché \\
+\hline
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int Le nombre de fois qu\textquotesingle{}apparait cette valeur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{yams_8c_a14e8f2fb81b28a8715b0f9c502c48020}\label{yams_8c_a14e8f2fb81b28a8715b0f9c502c48020}} 
+\index{yams.c@{yams.c}!triBulle@{triBulle}}
+\index{triBulle@{triBulle}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{triBulle()}{triBulle()}}
+{\footnotesize\ttfamily void tri\+Bulle (\begin{DoxyParamCaption}\item[{int}]{les\+De\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Procédure de tri (bulle) permettant de trier les dés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em les\+De} & Un tableau qui contient les valeurs des dés \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a7800b026c58a9b4b1a63f2dcbb238578}\label{yams_8c_a7800b026c58a9b4b1a63f2dcbb238578}} 
+\index{yams.c@{yams.c}!updateTotaux@{updateTotaux}}
+\index{updateTotaux@{updateTotaux}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{updateTotaux()}{updateTotaux()}}
+{\footnotesize\ttfamily void update\+Totaux (\begin{DoxyParamCaption}\item[{int}]{tab\+Score\mbox{[}2\mbox{]}\mbox{[}13\mbox{]},  }\item[{int}]{totaux\mbox{[}2\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Procédure qui met a jour les totaux. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tab\+Score} & Un tableau qui contient les scores des 2 joueurs \\
+\hline
+{\em totaux} & Un tableau qui contient les totaux des 2 joueurs \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{yams_8c_a5d5ab94d3074ccf9db6462e9457a3da2}\label{yams_8c_a5d5ab94d3074ccf9db6462e9457a3da2}} 
+\index{yams.c@{yams.c}!videTableau@{videTableau}}
+\index{videTableau@{videTableau}!yams.c@{yams.c}}
+\doxysubsubsection{\texorpdfstring{videTableau()}{videTableau()}}
+{\footnotesize\ttfamily void vide\+Tableau (\begin{DoxyParamCaption}\item[{int}]{tab\mbox{[}13\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Un procédure qui permet de remetre à 0 un tableau de taille 13. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tab} & le tableau a remettre a 0 \\
+\hline
+\end{DoxyParams}
